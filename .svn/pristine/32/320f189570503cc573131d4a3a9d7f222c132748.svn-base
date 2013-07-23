@@ -1,0 +1,57 @@
+﻿@model IEnumerable<OneContact.Models.teslGeneralInformationForm>
+
+@{
+    ViewBag.Title = "Certification Directory";
+	var standardList = new Dictionary<int, string>();
+    standardList.Add(1, "Professional Certificate Standard One [Interim]");
+    standardList.Add(2, "Professional Certificate Standard One [Permanent]");
+    standardList.Add(3, "Professional Certificate Standard Two [Interim]");
+    standardList.Add(4, "Professional Certificate Standard Two [Permanent]");
+    standardList.Add(5, "Professional Certificate Standard Three [Interim]");
+    standardList.Add(6, "Professional Certificate Standard Three [Permanent]");
+	int count = 0;
+}
+
+<table>
+    <tr>
+        <th>LAST NAME</th>
+        <th>FIRST NAME</th>
+        <th>LEVEL/STANDARD</th>
+        <th>DATE CERTIFIED</th>
+    </tr>
+
+@foreach (var item in Model) {
+	if ((item.DateCertified != null) && (item.DateCertified != "")) {
+		<tr>
+			<td style="width:22%;">
+				@Html.DisplayFor(modelItem => item.LastName)
+			</td>
+			<td style="width:24%;">
+				@Html.DisplayFor(modelItem => item.FirstName)
+			</td>
+			<td style="width:35%;">
+				@{
+					int index = Convert.ToInt32(item.StandardAppliedFor);
+					foreach(var titem in standardList)
+					{
+						if(titem.Key == index)
+						{
+							@Html.DisplayFor(modelItem => titem.Value);
+						}
+					}
+				}
+			</td>
+			<td class="date">
+				@Html.DisplayFor(modelItem => item.DateCertified)
+			</td>
+		</tr>
+					count = count + 1;
+	}
+}
+
+@if (count == 0) {
+	<tr>
+		<td colspan="4">There's no one certified.</td>
+	</tr>
+}
+</table>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a08e2684df6d41a48dd627fcf74327a4" Name="Diagram1">
+        <EntityTypeShape EntityType="TESLModel.teslGeneralInformationForm" Width="1.5" PointX="2.5" PointY="0.5" />
+        <EntityTypeShape EntityType="TESLModel.teslInternationalApplicationForm" Width="1.5" PointX="10.875" PointY="3.5" />
+        <EntityTypeShape EntityType="TESLModel.teslOntarioApplicationForm" Width="1.5" PointX="8.5" PointY="3.5" />
+        <EntityTypeShape EntityType="TESLModel.teslStandardOneForm" Width="1.5" PointX="4.875" PointY="0.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

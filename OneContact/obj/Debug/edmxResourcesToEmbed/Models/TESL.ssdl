@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TESLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TESLModelStoreContainer">
+    <EntitySet Name="teslGeneralInformationForm" EntityType="TESLModel.Store.teslGeneralInformationForm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="teslInternationalApplicationForm" EntityType="TESLModel.Store.teslInternationalApplicationForm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="teslOntarioApplicationForm" EntityType="TESLModel.Store.teslOntarioApplicationForm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="teslStandardOneForm" EntityType="TESLModel.Store.teslStandardOneForm" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="teslGeneralInformationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Initial" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="NameOnCertificate" Type="nchar" MaxLength="50" />
+    <Property Name="CivicNumber" Type="int" />
+    <Property Name="Street" Type="nchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="int" />
+    <Property Name="City" Type="nchar" MaxLength="50" />
+    <Property Name="Province" Type="int" />
+    <Property Name="HomePhone" Type="nchar" MaxLength="20" />
+    <Property Name="WorkPhone" Type="nchar" MaxLength="20" />
+    <Property Name="MobilePhone" Type="nchar" MaxLength="20" />
+    <Property Name="Email" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fax" Type="nchar" MaxLength="20" />
+    <Property Name="StandardAppliedFor" Type="int" />
+    <Property Name="ProvincialMembership" Type="int" />
+    <Property Name="MembershipSumitMethod" Type="int" />
+    <Property Name="LanguageProficiencyRequired" Type="int" />
+    <Property Name="Upgrading" Type="tinyint" />
+    <Property Name="DateCertified" Type="nchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="teslInternationalApplicationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Address" Type="nchar" MaxLength="200" />
+    <Property Name="Phone" Type="nchar" MaxLength="20" />
+    <Property Name="Fax" Type="nchar" MaxLength="20" />
+    <Property Name="Email" Type="nchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="teslOntarioApplicationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="20" />
+    <Property Name="MemberNumber" Type="nchar" MaxLength="20" />
+    <Property Name="DueDate" Type="date" />
+    <Property Name="CopyImage" Type="image" />
+  </EntityType>
+  <EntityType Name="teslStandardOneForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DegreeCompleted" Type="int" />
+    <Property Name="YearCompleted" Type="int" />
+    <Property Name="University" Type="nchar" MaxLength="50" />
+    <Property Name="TrainingInstitution" Type="int" />
+    <Property Name="ContactPerson" Type="nchar" MaxLength="20" />
+    <Property Name="ProgramName" Type="nchar" MaxLength="20" />
+    <Property Name="DateCompleted" Type="nchar" MaxLength="10" />
+    <Property Name="InstitutionName" Type="nchar" MaxLength="20" />
+    <Property Name="CivicNumber" Type="int" />
+    <Property Name="Street" Type="nchar" MaxLength="10" />
+    <Property Name="PostalCode" Type="int" />
+    <Property Name="City" Type="nchar" MaxLength="10" />
+    <Property Name="Province" Type="int" />
+    <Property Name="SponsorTeacherName" Type="nchar" MaxLength="20" />
+    <Property Name="ContactInformation" Type="nchar" MaxLength="30" />
+    <Property Name="PracticumSupervisor" Type="nchar" MaxLength="30" />
+    <Property Name="HoursObserving" Type="int" />
+    <Property Name="HoursPractice" Type="int" />
+  </EntityType>
+</Schema>

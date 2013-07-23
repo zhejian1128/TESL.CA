@@ -1,0 +1,173 @@
+﻿@using OneContact.Controllers
+@model OneContact.Models.teslGeneralInformationFormModel
+@using (Html.BeginUmbracoForm<GeneralInformationFormController>("NextStep"))
+{
+	<section class="form">
+    <div class="text">
+        <p>Last Name</p>
+		@Html.EditorFor(model => model.LastName)<br />
+    </div>
+    <div class="text">
+        <p>First Name</p>
+		@Html.EditorFor(model => model.FirstName)<br />
+    </div>
+    <div class="text">
+        <p>Initial(s)</p>
+        @Html.EditorFor(model => model.Initial, new { @class = "w70" })<br />
+    </div>
+
+    <div class="text">
+        <p>Name as you wish it to appear on the certificate</p>
+        @Html.EditorFor(model => model.NameOnCertificate, new { @class = "w500" })<br />
+    </div>
+    
+    <div class="text">
+        <p>Permanent Address <small>(to which your certificate will be mailed)</small></p>
+        <div class="block">
+            <div class="text">
+                <p>Civic number</p>
+                @Html.EditorFor(model => model.CivicNumber, new { @class = "w100" })<br />
+            </div>
+            <div class="text">
+                <p>Street</p>
+                @Html.EditorFor(model => model.Street)<br />
+            </div>
+            
+            <div class="text">
+                <p>Postal Code</p>
+                @Html.EditorFor(model => model.PostalCode, new { @class = "w100" })<br />
+            </div>
+            <div class="text">
+                <p>City</p>
+                @Html.EditorFor(model => model.City)<br />
+            </div>
+            <div class="text">
+                <p>Province</p>
+                @Html.DropDownListFor(model => model.Province, Model.ProvinceList, new { @class = "w70" })
+            </div>
+        </div>
+    </div>
+    <div class="text">
+        <p>Home telephone</p>
+        @Html.EditorFor(model => model.HomePhone_First)
+        @Html.EditorFor(model => model.HomePhone_Second)
+        @Html.EditorFor(model => model.HomePhone_Third)
+    </div>
+    
+    <div class="text">
+        <p>Work telephone</p>
+        @Html.EditorFor(model => model.WorkPhone_First)
+        @Html.EditorFor(model => model.WorkPhone_Second)
+        @Html.EditorFor(model => model.WorkPhone_Third)
+        @Html.EditorFor(model => model.WorkPhone_Ext)
+    </div>
+    
+    <div class="text">
+        <p>Mobile telephone</p>
+        @Html.EditorFor(model => model.MobilePhone_First)
+        @Html.EditorFor(model => model.MobilePhone_Second)
+        @Html.EditorFor(model => model.MobilePhone_Third)
+    </div>
+    
+    <div class="text">
+        <p>Email</p>
+         @Html.EditorFor(model => model.Email)
+    </div>
+    
+    <div class="text">
+        <p>Fax</p>
+        @Html.EditorFor(model => model.Fax_First)
+        @Html.EditorFor(model => model.Fax_Second)
+        @Html.EditorFor(model => model.Fax_Third)
+    </div>
+
+    <div class="text">
+        <p>What Standard are you applying for?</p>
+        <label>
+            <input type="checkbox"/>
+            Professional Certificate Standard One [Interim]
+        </label>
+        <label>
+            <input type="checkbox"/>
+            Professional Certificate Standard One [Permanent]
+        </label>
+        <br/>
+        <label>
+            <input type="checkbox"/>
+            Professional Certificate Standard Two [Interim]
+        </label>
+        <label>
+            <input type="checkbox"/>
+            Professional Certificate Standard Two [Permanent]
+        </label>
+        <br/>
+        <label>
+            <input type="checkbox"/>
+            Professional Certificate Standard Three [Interim]
+        </label>
+        <label>
+            <input type="checkbox"/>
+            Professional Certificate Standard Three [Permanent]
+        </label>
+    </div>
+    
+    <div class="text">
+        <p>Are you upgrading to a higher standard?</p>
+        <label>
+            @Html.RadioButtonFor(model => model.Upgrading, "Y")
+            Yes
+        </label>
+        <label>
+            @Html.RadioButtonFor(model => model.Upgrading, "N")
+            No
+        </label>
+    </div>
+    
+    <div class="text">
+        <p>Membership</p>
+        <div class="block long">
+            <p>Provincial Member of</p>
+            @foreach(var item in Model.ProvincialMembershipList) { 
+                <label class="w110">
+                    <input type="checkbox"/>@item
+                </label>
+            }
+            <br/>
+            <br/>
+            <label class="w340">
+                <input type="checkbox"/>
+                Email sent directly from province
+            </label>
+            <label class="w340">
+                <input type="checkbox"/>
+                Official receipt enclosed
+            </label>
+            <label class="w340">
+                <input type="checkbox"/>
+                Membership card enclosed
+            </label>
+            <label class="w340">
+                <input type="checkbox"/>
+                International Membership Application Enclosed
+            </label>
+        </div>
+    </div>
+    
+    <div class="text">
+        <p>English Language Proficiency Requirement</p>
+        <label>
+            @Html.RadioButtonFor(model => model.LanguageProficiencyRequired, 1)
+            Native language speaker
+        </label>
+        <label>
+            @Html.RadioButtonFor(model => model.LanguageProficiencyRequired, 0)
+            Non-native language speaker with valid official ELP score enclosed
+        </label>
+    </div>
+
+    <div class="buttons">
+        <input type="submit" value="Continue" />
+        <button class="blank">Reset form</button>
+    </div>
+</section>
+}

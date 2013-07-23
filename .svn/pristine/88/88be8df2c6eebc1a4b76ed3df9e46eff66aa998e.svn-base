@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE root[ 
+<!ELEMENT CertificationDirectory ANY>
+<!ATTLIST CertificationDirectory id ID #REQUIRED>
+<!ELEMENT Contact ANY>
+<!ATTLIST Contact id ID #REQUIRED>
+<!ELEMENT Form ANY>
+<!ATTLIST Form id ID #REQUIRED>
+<!ELEMENT GeneralInformationForm ANY>
+<!ATTLIST GeneralInformationForm id ID #REQUIRED>
+<!ELEMENT Home ANY>
+<!ATTLIST Home id ID #REQUIRED>
+<!ELEMENT umbHomepage ANY>
+<!ATTLIST umbHomepage id ID #REQUIRED>
+<!ELEMENT SiteAdmin ANY>
+<!ATTLIST SiteAdmin id ID #REQUIRED>
+<!ELEMENT slider ANY>
+<!ATTLIST slider id ID #REQUIRED>
+<!ELEMENT sliders ANY>
+<!ATTLIST sliders id ID #REQUIRED>
+<!ELEMENT Testimonials ANY>
+<!ATTLIST Testimonials id ID #REQUIRED>
+<!ELEMENT umbTextpage ANY>
+<!ATTLIST umbTextpage id ID #REQUIRED>
+
+]>
+<root id="-1">
+  <umbHomepage id="1051" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2013-07-12T11:52:28" updateDate="2013-07-22T11:45:18" nodeName="Simple website" urlName="simple-website" path="-1,1051" isDoc="" nodeType="1048" creatorName="admin" writerName="admin" writerID="0" template="1046" nodeTypeAlias="umbHomepage">
+    <siteName>Simple website</siteName>
+    <siteDescription><![CDATA[Off to a great start]]></siteDescription>
+    <bodyText><![CDATA[<p>The Simple Starter Kit gives you a bare-bones website that introduces you to a set of well-defined conventions for building an Umbraco website.</p>
+<p>The Simple website is very basic in form and provided without any design or functionality - unless you add a Skin, of course. By installing the Simple Starter Kit, you'll begin with a minimal site built on best practices. You'll also enjoy the benefits of speaking the same "language" as the rest of the Umbraco community by using common properties and naming conventions.</p>
+<p>Now that you know what the Simple site is, it is time to get started using Umbraco.</p>]]></bodyText>
+    <umbTextpage id="1052" parentID="1051" level="2" creatorID="0" sortOrder="0" createDate="2013-07-12T11:52:28" updateDate="2013-07-12T14:54:32" nodeName="Installing modules" urlName="installing-modules" path="-1,1051,1052" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+      <umbracoNaviHide>0</umbracoNaviHide>
+      <bodyText><![CDATA[
+<p>Umbraco modules encapsulate specific bits of advanced
+functionality that are easily added to your website.</p>
+
+<p>Once installed, Umbraco modules are open source and easy to
+customize if you want to modify the behavior for your specific
+needs.<br />
+ Because Umbraco modules are provided under the MIT license you are
+free to use and modify them any way you want, with no strings
+attached.</p>
+
+<p>To add Umbraco modules to your website, go to the
+<strong>Settings</strong> section, expand the
+<strong>Templates</strong> item, select the <strong>Starterkit
+Master</strong> template, then click the <strong>Customize
+Skin</strong> button on the toolbar.</p>
+
+<p>Umbraco modules are available for various kinds of navigation, a
+sitemap, social media feeds, and a contact form. The list of
+available Umbraco modules is growing rapidly and is automatically
+updated from a central source, always fresh and current.</p>
+
+<p><a href="http://umbraco.org/get-started"
+title="Get Started with Umbraco">Get more information</a> about the
+umbraco way.</p>
+]]></bodyText>
+    </umbTextpage>
+    <umbTextpage id="1053" parentID="1051" level="2" creatorID="0" sortOrder="1" createDate="2013-07-12T11:52:28" updateDate="2013-07-12T14:54:32" nodeName="Go further" urlName="go-further" path="-1,1051,1053" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+      <umbracoNaviHide>0</umbracoNaviHide>
+      <bodyText><![CDATA[
+<p>The Simple Starter Kit only scratches the surface of what's
+possible with Umbraco. Below the Simple Starter Kit and its modules
+lies a great architecture that lets you implement whatever you
+need.</p>
+
+<p>With Umbraco you've finally got a solid, open and reliable
+platform for websites as basic as the Simple site, and Umbraco can
+be rapidly expanded to support multi-language websites,
+collaboration platforms and intra/extranets, to name just a
+few.</p>
+
+<p>Advanced functionality is created with Umbraco macros, built
+with XSLT and Umbraco's award-winning .NET integration, including
+full support for any .NET User or Custom control. Create and
+integrate your own .NET macros in mere minutes with point and click
+simplicity. Simply copy your controls to the Umbraco website, go to
+the <strong>Developer</strong> section and create a new macro,
+selecting your control from the list.</p>
+
+<p>You can also use <a
+href="http://umbraco.org/help-and-support/video-tutorials/getting-started/working-with-webmatrix"
+ title="Working with Razor">Microsoft's Razor</a> syntax to quickly
+add dynamic functionality to your site.</p>
+
+<p>We've also gathered the best community macros into a repository
+that's also accessed from the <strong>Developer</strong> section,
+in the <strong>Packages</strong> area. You can find more
+information <a
+href="http://umbraco.org/help-and-support/video-tutorials/introduction-to-umbraco/sitebuilder-introduction/what-are-macros"
+ title="About creating Umbraco macros">about creating macros</a>,
+on the Umbraco website.</p>
+
+<p>The sky is the limit with Umbraco, and you have the benefit a
+friendly community, training, and guaranteed support. Find out how
+to <a href="http://umbraco.org/help-and-support"
+title="Get Umbraco Support">get help</a>.</p>
+]]></bodyText>
+    </umbTextpage>
+    <umbTextpage id="1054" parentID="1051" level="2" creatorID="0" sortOrder="2" createDate="2013-07-12T11:52:28" updateDate="2013-07-12T14:54:32" nodeName="Getting started" urlName="getting-started" path="-1,1051,1054" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+      <umbracoNaviHide>0</umbracoNaviHide>
+      <bodyText><![CDATA[
+<p>You've installed Umbraco and the basic Simple website.</p>
+
+<p>Edit the text on the homepage and create a site structure by
+adding new texpages to your site. This is all done in the
+<strong>Content</strong> section.</p>
+
+<p>If you find the editing options provided by the Simple site too
+limited for you needs, simply add more properties to the page by
+going to the <strong>Settings</strong> section, expanding the
+<strong>Document Types</strong> item and adding new properties on
+the <strong>Generic Properties</strong> tab. You can find more
+information about <a
+href="http://umbraco.org/help-and-support/video-tutorials/introduction-to-umbraco/sitebuilder-introduction/document-types"
+ title="About Umbraco Document Types">document types and
+properties</a> at the <a href="http://umbraco.org"
+title="The Umbraco Website">Umbraco website</a>.</p>
+
+<p>You'll probably want to personalize your site by changing the
+current design. This is also done in the <strong>Settings</strong>
+section, either by editing the CSS styles and HTML templates or by
+selecting and applying a Skin. Umbraco uses master templates, so
+the main, common markup is placed in the <strong>Starterkit
+Master</strong> template, while the Homeage and Textpage have
+separate templates for their unique layouts. You can find more
+information about <a
+href="http://umbraco.org/help-and-support/video-tutorials/introduction-to-umbraco/sitebuilder-introduction/templates"
+ title="Umbraco Templates and Stylesheets">templates and css</a> in
+umbraco at the umbraco website.</p>
+
+<p>Once you're happy with your site's design, you might want to add
+more functionality, such as automated navigation. This is done by
+<a
+href="http://umbraco.org/help-and-support/video-tutorials/getting-started"
+ title="Umbraco Modules">installing Umbraco modules</a>.</p>
+]]></bodyText>
+    </umbTextpage>
+    <Contact id="1065" parentID="1051" level="2" creatorID="0" sortOrder="3" createDate="2013-07-12T14:23:40" updateDate="2013-07-12T14:54:32" nodeName="Contact Us" urlName="contact-us" path="-1,1051,1065" isDoc="" nodeType="1064" creatorName="admin" writerName="admin" writerID="0" template="1063" nodeTypeAlias="Contact" />
+    <Testimonials id="1068" parentID="1051" level="2" creatorID="0" sortOrder="4" createDate="2013-07-12T15:08:50" updateDate="2013-07-12T15:08:52" nodeName="Testimonials" urlName="testimonials" path="-1,1051,1068" isDoc="" nodeType="1067" creatorName="admin" writerName="admin" writerID="0" template="1066" nodeTypeAlias="Testimonials">
+      <umbTextpage id="1071" parentID="1068" level="3" creatorID="0" sortOrder="1" createDate="2013-07-12T15:18:05" updateDate="2013-07-12T15:18:05" nodeName="John Doe" urlName="john-doe" path="-1,1051,1068,1071" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+        <umbracoNaviHide>0</umbracoNaviHide>
+        <bodyText><![CDATA[Hello world!]]></bodyText>
+      </umbTextpage>
+      <umbTextpage id="1072" parentID="1068" level="3" creatorID="0" sortOrder="1" createDate="2013-07-12T16:10:38" updateDate="2013-07-12T16:10:38" nodeName="John Doe (1)" urlName="john-doe-(1)" path="-1,1051,1068,1072" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+        <umbracoNaviHide>0</umbracoNaviHide>
+        <bodyText><![CDATA[Hello from MVC.]]></bodyText>
+      </umbTextpage>
+      <umbTextpage id="1073" parentID="1068" level="3" creatorID="0" sortOrder="2" createDate="2013-07-12T16:16:07" updateDate="2013-07-12T16:16:07" nodeName="John Doe (2)" urlName="john-doe-(2)" path="-1,1051,1068,1073" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+        <umbracoNaviHide>0</umbracoNaviHide>
+        <bodyText><![CDATA[Hello from MVC.]]></bodyText>
+      </umbTextpage>
+      <umbTextpage id="1074" parentID="1068" level="3" creatorID="0" sortOrder="3" createDate="2013-07-12T16:36:39" updateDate="2013-07-12T16:36:39" nodeName="wq" urlName="wq" path="-1,1051,1068,1074" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+        <umbracoNaviHide>0</umbracoNaviHide>
+        <bodyText><![CDATA[qw]]></bodyText>
+      </umbTextpage>
+      <umbTextpage id="1100" parentID="1068" level="3" creatorID="0" sortOrder="4" createDate="2013-07-22T11:49:19" updateDate="2013-07-22T11:49:19" nodeName="232" urlName="232" path="-1,1051,1068,1100" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+        <umbracoNaviHide>0</umbracoNaviHide>
+        <bodyText><![CDATA[232323]]></bodyText>
+      </umbTextpage>
+      <umbTextpage id="1104" parentID="1068" level="3" creatorID="0" sortOrder="5" createDate="2013-07-22T16:21:58" updateDate="2013-07-22T16:21:58" nodeName="af" urlName="af" path="-1,1051,1068,1104" isDoc="" nodeType="1049" creatorName="admin" writerName="admin" writerID="0" template="1047" nodeTypeAlias="umbTextpage">
+        <umbracoNaviHide>0</umbracoNaviHide>
+        <bodyText><![CDATA[asdfasdfadsfasdfasdf]]></bodyText>
+      </umbTextpage>
+    </Testimonials>
+    <Form id="1081" parentID="1051" level="2" creatorID="0" sortOrder="5" createDate="2013-07-22T01:05:50" updateDate="2013-07-22T11:52:38" nodeName="Form" urlName="form" path="-1,1051,1081" isDoc="" nodeType="1077" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="Form">
+      <GeneralInformationForm id="1082" parentID="1081" level="3" creatorID="0" sortOrder="0" createDate="2013-07-22T01:06:00" updateDate="2013-07-22T11:52:42" nodeName="GeneralInformationForm" urlName="generalinformationform" path="-1,1051,1081,1082" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1076" nodeTypeAlias="GeneralInformationForm" />
+    </Form>
+    <sliders id="1096" parentID="1051" level="2" creatorID="0" sortOrder="6" createDate="2013-07-22T11:19:11" updateDate="2013-07-22T12:32:57" nodeName="sliders" urlName="sliders" path="-1,1051,1096" isDoc="" nodeType="1056" creatorName="admin" writerName="admin" writerID="0" template="1046" nodeTypeAlias="sliders">
+      <slideTimems />
+      <slider id="1097" parentID="1096" level="3" creatorID="0" sortOrder="0" createDate="2013-07-22T11:19:21" updateDate="2013-07-22T11:21:45" nodeName="slider1" urlName="slider1" path="-1,1051,1096,1097" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1001/koala.jpg</umbracoFile>
+        <teaserText><![CDATA[<p>babababababab</p>]]></teaserText>
+      </slider>
+      <slider id="1098" parentID="1096" level="3" creatorID="0" sortOrder="1" createDate="2013-07-22T11:19:30" updateDate="2013-07-22T11:21:57" nodeName="slider2" urlName="slider2" path="-1,1051,1096,1098" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1002/lighthouse.jpg</umbracoFile>
+        <teaserText><![CDATA[<p>gregerwgwegwergregewgergeg</p>]]></teaserText>
+      </slider>
+    </sliders>
+  </umbHomepage>
+  <Home id="1089" parentID="-1" level="1" creatorID="0" sortOrder="1" createDate="2013-07-22T09:54:25" updateDate="2013-07-22T17:34:04" nodeName="TESLCanada" urlName="teslcanada" path="-1,1089" isDoc="" nodeType="1086" creatorName="admin" writerName="admin" writerID="0" template="1085" nodeTypeAlias="Home">
+    <sliders id="1101" parentID="1089" level="2" creatorID="0" sortOrder="0" createDate="2013-07-22T15:32:47" updateDate="2013-07-22T16:26:07" nodeName="sliders" urlName="sliders" path="-1,1089,1101" isDoc="" nodeType="1056" creatorName="admin" writerName="admin" writerID="0" template="1046" nodeTypeAlias="sliders">
+      <slider id="1102" parentID="1101" level="3" creatorID="0" sortOrder="0" createDate="2013-07-22T15:33:02" updateDate="2013-07-22T17:03:25" nodeName="slider1" urlName="slider1" path="-1,1089,1101,1102" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1003/jellyfish.jpg</umbracoFile>
+        <teaserText><![CDATA[<p>test2342342424</p>]]></teaserText>
+        <hyperlink>http://www.google.uk</hyperlink>
+        <new_win>9</new_win>
+      </slider>
+      <slider id="1103" parentID="1101" level="3" creatorID="0" sortOrder="1" createDate="2013-07-22T15:33:14" updateDate="2013-07-22T17:03:33" nodeName="slider2" urlName="slider2" path="-1,1089,1101,1103" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1004/penguins.jpg</umbracoFile>
+        <teaserText><![CDATA[<p>wefqfqfwqfwqefqf</p>]]></teaserText>
+        <hyperlink>http://www.bing.co.uk</hyperlink>
+        <new_win>9</new_win>
+      </slider>
+      <slider id="1105" parentID="1101" level="3" creatorID="0" sortOrder="2" createDate="2013-07-22T16:33:28" updateDate="2013-07-22T17:03:50" nodeName="tewtw" urlName="tewtw" path="-1,1089,1101,1105" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1005/tulips.jpg</umbracoFile>
+        <teaserText><![CDATA[<p>fqfqfqwfqwfqwfwqefwf</p>]]></teaserText>
+        <hyperlink>http://www.google.co.uk</hyperlink>
+        <new_win>10</new_win>
+      </slider>
+      <slideTimems>50</slideTimems>
+      <openTheLinkInACurrentWindowOrNewWindow>8</openTheLinkInACurrentWindowOrNewWindow>
+    </sliders>
+  </Home>
+  <SiteAdmin id="1099" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2013-07-22T11:27:35" updateDate="2013-07-22T14:50:47" nodeName="admin" urlName="admin" path="-1,1099" isDoc="" nodeType="1095" creatorName="admin" writerName="admin" writerID="0" template="1094" nodeTypeAlias="SiteAdmin" />
+</root>

@@ -1,0 +1,181 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "teslMaster.cshtml";
+}
+@Umbraco.RenderMacro("ListSubPages")
+<section class="breadcrumb">@Umbraco.RenderMacro("Breadcrumb")</section>
+	
+<section class="programlist">
+    <div>
+        <img src="/media/1010/bubblecomputer.png" />
+        <p>Distance Education or On Line Programs.</p>
+    </div>
+    <div>
+        <img src="/media/1012/bubblehat.png" />
+        <p>Programs that have received Interim Recognition. Students who graduatefrom an interim recognized program will be able to apply for TESL Canada certification once the program has received full recognition.</p>
+    </div>
+    <div>
+        <img src="/media/1011/bubblegreenhat.png" />
+        <p>Programs is currently reapplying for recognition. Students who graduate from a program during reapplication period will still be able to apply for TESL Canada certification.</p>
+    </div>
+    
+    <section class="noticebox">
+        <p>The expired list has moved to the new page. For a list of previously recognized programs <a href="#">click here.</a></p>
+    </section>
+</section>
+
+<section class="mapside program">
+    <a href="#"><img src="~/Images/dummy.map.jpg" /></a>
+</section>
+
+<section class="programs">
+    <div class="filter">
+        <select id="province" onchange="filter()">
+            <option value="0">All Provinces</option>
+			<option value="1">AB</option>
+			<option value="2">BC</option>
+			<option value="3">MB</option>
+			<option value="4">ON</option>
+        </select>
+        <select id="prog" onchange="filter()">
+			<option value="0">All Programs types</option>
+            <option value="1">Distance / Online</option>
+			<option value="2">Interim Rcognition</option>
+			<option value="3">Reapplying for Recognition</option>			
+        </select>
+    </div>
+
+    <table class="programs" id="programs">
+        <thead>
+            <th class="type">&nbsp;</th>
+            <th class="province"><span>Province</span></th>
+            <th class="program"><span>Program</span></th>
+            <th class="dates"><span>Effective Dates</span></th>
+            <th class="website"><span>Website</span></th>
+            <th class="notes"><span>Notes</span></th>
+        </thead>
+        <tr>
+            <td><span class="icon icon-hat"></span></td>
+            <td>AB</td>
+            <td><a href="#">This is a program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td><span class="icon icon-note" data-text="Note text goes here. Lorem Bacon Ipsum and some more tekst..."></span></td>
+        </tr>
+        <tr>
+            <td><span class="icon icon-hat"></span></td>
+            <td>BC</td>
+            <td><a href="#">This is a longer program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span class="icon icon-computer"></span></td>
+            <td>AB</td>
+            <td><a href="#">This is a longer program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span class="icon icon-greenhat"></span></td>
+            <td>AB</td>
+            <td><a href="#">This is a longer program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span class="icon icon-hat"></span></td>
+            <td>MB</td>
+            <td><a href="#">This is a longer program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td><span class="icon icon-note" data-text="Note text 2 goes here. Lorem Bacon Ipsum and some more tekst. Lorem Bacon Ipsum and some more tekst..."></span></td>
+        </tr>
+        <tr>
+            <td><span class="icon icon-greenhat"></span></td>
+            <td>ON</td>
+            <td><a href="#">This is a longer program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td><span class="icon icon-note" data-text="Note text 3 goes here. Lorem Bacon Ipsum and some more tekst..."></span></td>
+        </tr>
+        <tr>
+            <td><span class="icon icon-computer"></span></td>
+            <td>ON</td>
+            <td><a href="#">This is a longer program title</a></td>
+            <td>06/21/2013 - 12/21/2013</td>
+            <td><a href="#">www.google.com</a></td>
+            <td></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+		arr = new Array();
+		
+        $(window).ready(function ()
+        {			
+            TESL.ProgramTable("table.programs");
+			pro = document.getElementById("programs");
+			arr = new Array();
+			for (i = 1; i<pro.rows.length; i++)
+			{
+				rec = new Array();
+				for (j=0; j<6; j++)
+				{
+					rec.push(pro.rows[i].cells[j].innerHTML);
+				}
+				arr.push(rec);
+			}
+        });
+		
+		function filter()
+		{
+			//alert(eval(document.getElementById('province').value));
+			//alert(document.getElementById('province').options[document.getElementById('province').value].text);
+			prov = eval(document.getElementById('province').value);
+			prog = eval(document.getElementById('prog').value);
+			
+			newArr = new Array();
+			
+			for (i=0; i<arr.length; i++)
+			{
+				if(prov != 0)
+				{
+					str = document.getElementById('province').options[document.getElementById('province').value].text;
+					if(arr[i][1].indexOf(str) < 0)
+					{
+						continue;
+					}
+				}
+				if(prog != 0)
+				{
+					word = new Array('icon-computer','icon-hat','icon-greenhat');
+					if(arr[i][0].indexOf(word[prog-1]) < 0)
+					{
+						continue;
+					}
+				}
+				newArr.push(arr[i]);
+			}
+			//alert("length = " + newArr.length);
+			
+			pro = document.getElementById("programs");
+			
+			for (i=pro.rows.length-1; i>0; i--)
+			{
+				pro.deleteRow(i);
+			}
+			for (i=0; i<newArr.length; i++)
+			{
+				row = pro.insertRow(i+1);
+				for(j=0; j<6; j++)					
+				{
+					cell = row.insertCell(j);
+					cell.innerHTML = newArr[i][j];
+				}
+			}
+		}
+    </script>
+</section>

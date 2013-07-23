@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "teslMaster.cshtml";
+}
+<section class="listsubpages">@Umbraco.RenderMacro("ListSubPages")</section>
+<section class="mainArticle">
+	<img src="/media/1008/map.JPG" class="map"/>
+	<h1>@Umbraco.Field("title")</h1>
+	<p>@Umbraco.Field("mainContent")</p>
+</section>

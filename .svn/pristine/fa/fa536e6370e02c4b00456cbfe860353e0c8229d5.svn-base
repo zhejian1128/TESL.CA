@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    Layout = "teslMaster.cshtml";
+	var provinceList = new List<SelectListItem>
+    {
+        new SelectListItem {Selected = true, Text = "Contact", Value = "contact"},
+        new SelectListItem {Selected = false, Text = "Request for quote", Value = "quote"},
+        new SelectListItem {Selected = false, Text = "Testimonial", Value = "testimonial"},
+    };
+    var provincialMembershipList = new List<String>
+    {
+        "BC TEAL", "TESL Saskatchewan", "TEAM", "TESL NS", "TESL PEI", "ATESL", "TEAL Manitoba", "TESL Ontario", "TESL NB", "TESL Yukon"
+    };
+}
+
+@{
+	
+    Html.RenderPartial("~/Views/Partials/GeneralInformationForm.cshtml", new OneContact.Models.teslGeneralInformationFormModel { ProvinceList = provinceList, ProvincialMembershipList = provincialMembershipList });
+}

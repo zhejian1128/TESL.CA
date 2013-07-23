@@ -1,0 +1,148 @@
+﻿@using OneContact.Controllers
+@model OneContact.Models.teslGeneralInformationFormModel
+<h1>TESL Canada Federation Professional Certificate Application Form</h1>
+<h4>General Information Form <small>(required for all applications)</small></h4>
+@using (Html.BeginUmbracoForm<FormController>("NextStep"))
+{
+	<section class="form">
+    <div class="text">
+        <p>Last Name</p>
+		@Html.EditorFor(model => model.LastName)<br />
+    </div>
+    <div class="text">
+        <p>First Name</p>
+		@Html.EditorFor(model => model.FirstName)<br />
+    </div>
+    <br />
+    <div class="text">
+        <p>Initial(s)</p>
+        @Html.TextBoxFor(model => model.Initial, new { @class = "w100" })<br />
+    </div>
+
+    <div class="text">
+        <p>Name as you wish it to appear on the certificate</p>
+        @Html.TextBoxFor(model => model.NameOnCertificate, new { @class = "w500" })<br />
+    </div>
+    
+    <div class="text">
+        <p>Permanent Address <small>(to which your certificate will be mailed)</small></p>
+        <div class="block">
+            <div class="text">
+                <p>Civic number</p>
+                @Html.TextBoxFor(model => model.CivicNumber, new { @class = "w100" })<br />
+            </div>
+            <div class="text">
+                <p>Street</p>
+                @Html.EditorFor(model => model.Street)<br />
+            </div>
+            
+            <div class="text">
+                <p>Postal Code</p>
+                @Html.TextBoxFor(model => model.PostalCode, new { @class = "w100" })<br />
+            </div>
+            <div class="text">
+                <p>City</p>
+                @Html.EditorFor(model => model.City)<br />
+            </div>
+            <div class="text">
+                <p>Province</p>
+                @Html.DropDownListFor(model => model.Province, Model.ProvinceList, new { @class = "w70" })
+            </div>
+        </div>
+    </div>
+    <div class="text">
+        <p>Home telephone</p>
+        @Html.TextBoxFor(model => model.HomePhone_First, new { @class = "w30", placeholder = "000" })
+        @Html.TextBoxFor(model => model.HomePhone_Second, new { @class = "w30", placeholder = "123"})
+        @Html.TextBoxFor(model => model.HomePhone_Third, new { @class = "w40", placeholder = "4567" })
+    </div>
+    
+    <div class="text">
+        <p>Work telephone</p>
+        @Html.TextBoxFor(model => model.WorkPhone_First, new { @class = "w30", placeholder = "000" })
+        @Html.TextBoxFor(model => model.WorkPhone_Second, new { @class = "w30", placeholder = "123"})
+        @Html.TextBoxFor(model => model.WorkPhone_Third, new { @class = "w40", placeholder = "4567" })
+        @Html.TextBoxFor(model => model.WorkPhone_Ext, new { @class = "w40", placeholder = "Ext." })
+    </div>
+    
+    <div class="text">
+        <p>Mobile telephone</p>
+        @Html.TextBoxFor(model => model.MobilePhone_First, new { @class = "w30", placeholder = "000" })
+        @Html.TextBoxFor(model => model.MobilePhone_Second, new { @class = "w30", placeholder = "123"})
+        @Html.TextBoxFor(model => model.MobilePhone_Third, new { @class = "w40", placeholder = "4567" })
+    </div>
+    
+    <div class="text">
+        <p>Email</p>
+         @Html.EditorFor(model => model.Email)
+    </div>
+    
+    <div class="text">
+        <p>Fax</p>
+        @Html.TextBoxFor(model => model.Fax_First, new { @class = "w30", placeholder = "000" })
+        @Html.TextBoxFor(model => model.Fax_Second, new { @class = "w30", placeholder = "123"})
+        @Html.TextBoxFor(model => model.Fax_Third, new { @class = "w40", placeholder = "4567" })
+    </div>
+
+    <div class="text">
+        <p>What Standard are you applying for?</p>
+        @foreach(var item in Model.StandardList) {
+            <label>
+                @Html.RadioButtonFor(model => model.StandardAppliedFor, item.Key)
+                @item.Value
+            </label>
+        }
+    </div>
+    
+    <div class="text">
+        <p>Are you upgrading to a higher standard?</p>
+        <label>
+            @Html.RadioButtonFor(model => model.Upgrading, "Y")
+            Yes
+        </label>
+        <label>
+            @Html.RadioButtonFor(model => model.Upgrading, "N")
+            No
+        </label>
+    </div>
+    
+    <div class="text">
+        <p>Membership</p>
+        <div class="block long">
+            <p>Provincial Member of</p>
+            @foreach(var item in Model.ProvincialMembershipList) { 
+                <label>
+                @Html.RadioButtonFor(model => model.ProvincialMembership, item.Key)
+                @item.Value
+                </label>
+            }
+            <br/>
+            <br/>
+            @foreach (var item in Model.MembershipSubmitMethodList)
+            { 
+                <label class="w340">
+                @Html.RadioButtonFor(model => model.MembershipSubmitMethodList, item.Key)
+                @item.Value
+                </label>
+            }
+        </div>
+    </div>
+    
+    <div class="text">
+        <p>English Language Proficiency Requirement</p>
+        <label>
+            @Html.RadioButtonFor(model => model.LanguageProficiencyRequired, 1)
+            Native language speaker
+        </label>
+        <label>
+            @Html.RadioButtonFor(model => model.LanguageProficiencyRequired, 0)
+            Non-native language speaker with valid official ELP score enclosed
+        </label>
+    </div>
+
+    <div class="buttons">
+        <button type="submit">Continue</button>
+        <button class="blank">Reset Fields</button>
+    </div>
+</section>
+		}

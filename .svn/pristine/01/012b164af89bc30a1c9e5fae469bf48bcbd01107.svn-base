@@ -1,0 +1,58 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+	
+@{
+    Layout = "teslMaster.cshtml";
+}
+
+<section class="slider">
+    <div class="slide">
+		 @Umbraco.RenderMacro("ImageSlider")        
+    </div>
+    <ol></ol>
+    <script type="text/javascript">
+        $(window).ready(function ()
+        {
+			
+			        
+			
+			TESL.Slider.AutoDelay=@Umbraco.RenderMacro("getDelayTime");
+            TESL.Slider.Init(".slider");
+        });
+    </script>
+</section>
+
+<section class="teasers">
+    <div>
+        <a href="#">            
+            <img src="~/Images/TESLCanada/dummy.listitem.big.png" />            
+            <h2>Become Certified</h2>
+            <p>Professional Certification for ESL Teachers</p>
+            <button>Get Certified</button>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Images/TESLCanada/dummy.listitem.big.png" />
+            <h2>Training</h2>
+            <p>Find A TESL Canada Recognized Teacher Training Program</p>
+            <button>Find out more</button>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Images/TESLCanada/dummy.listitem.big.png" />
+            <h2>Jobs</h2>
+            <p>Canadian and International Jobs for ESL teachers</p>
+            <button>View postings</button>
+        </a>
+    </div>
+</section>
+
+<section class="newslist">
+   @Umbraco.RenderMacro("Newslist")
+</section>
+
+<section class="mapside">
+    <a href="#"><img src="~/Images/TESLCanada/dummy.map.jpg" /></a>
+    <a href="#"><img src="~/Images/TESLCanada/dummy.findtesl.jpg" /></a>
+</section>

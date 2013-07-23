@@ -1,0 +1,20 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "~/Views/umbMaster.cshtml";
+}
+
+<div id="page-bgtop">
+    <div id="content">
+        <div class="post">
+            <h2 class="title"><span>@Umbraco.Field("pageName")</span></h2>
+            <div class="entry">
+                @Umbraco.Field("bodyText")
+                @Umbraco.RenderMacro("Testimonials")
+            </div>
+        </div>
+    </div>
+    <!-- end div#content -->
+
+    <!-- end div#sidebar -->
+    <div style="clear: both; height: 1px"></div>
+</div>

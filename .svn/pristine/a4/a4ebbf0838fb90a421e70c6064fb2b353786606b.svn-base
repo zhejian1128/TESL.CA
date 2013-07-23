@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TESLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TESLModelStoreContainer">
+          <EntitySet Name="teslGeneralInformationForm" EntityType="TESLModel.Store.teslGeneralInformationForm" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="teslStandardOneForm" EntityType="TESLModel.Store.teslStandardOneForm" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_teslStandardOneForm_teslGeneralInformationForm" Association="TESLModel.Store.FK_teslStandardOneForm_teslGeneralInformationForm">
+            <End Role="teslGeneralInformationForm" EntitySet="teslGeneralInformationForm" />
+            <End Role="teslStandardOneForm" EntitySet="teslStandardOneForm" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="teslGeneralInformationForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Initial" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="NameOnCertificate" Type="nchar" MaxLength="50" />
+          <Property Name="CivicNumber" Type="int" />
+          <Property Name="Street" Type="nchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="int" />
+          <Property Name="City" Type="nchar" MaxLength="50" />
+          <Property Name="Province" Type="int" />
+          <Property Name="HomePhone" Type="nchar" MaxLength="20" />
+          <Property Name="WorkPhone" Type="nchar" MaxLength="20" />
+          <Property Name="MobilePhone" Type="nchar" MaxLength="20" />
+          <Property Name="Email" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Fax" Type="nchar" MaxLength="20" />
+          <Property Name="StandardAppliedFor" Type="int" />
+          <Property Name="ProvincialMembership" Type="int" />
+          <Property Name="MembershipSumitMethod" Type="int" />
+          <Property Name="LanguageProficiencyRequired" Type="int" />
+          <Property Name="Upgrading" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="teslStandardOneForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="DegreeCompleted" Type="int" />
+          <Property Name="YearCompleted" Type="int" />
+          <Property Name="University" Type="nchar" MaxLength="50" />
+          <Property Name="TrainingInstitution" Type="int" />
+          <Property Name="ContactPerson" Type="nchar" MaxLength="20" />
+          <Property Name="ProgramName" Type="nchar" MaxLength="20" />
+          <Property Name="DateCompleted" Type="nchar" MaxLength="10" />
+          <Property Name="InstitutionName" Type="nchar" MaxLength="20" />
+          <Property Name="CivicNumber" Type="int" />
+          <Property Name="Street" Type="nchar" MaxLength="10" />
+          <Property Name="PostalCode" Type="int" />
+          <Property Name="City" Type="nchar" MaxLength="10" />
+          <Property Name="Province" Type="int" />
+          <Property Name="SponsorTeacherName" Type="nchar" MaxLength="20" />
+          <Property Name="ContactInformation" Type="nchar" MaxLength="30" />
+          <Property Name="PracticumSupervisor" Type="nchar" MaxLength="30" />
+          <Property Name="HoursObserving" Type="int" />
+          <Property Name="HoursPractice" Type="int" />
+        </EntityType>
+        <Association Name="FK_teslStandardOneForm_teslGeneralInformationForm">
+          <End Role="teslGeneralInformationForm" Type="TESLModel.Store.teslGeneralInformationForm" Multiplicity="1" />
+          <End Role="teslStandardOneForm" Type="TESLModel.Store.teslStandardOneForm" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="teslGeneralInformationForm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="teslStandardOneForm">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TESLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TESLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="teslGeneralInformationForms" EntityType="TESLModel.teslGeneralInformationForm" />
+          <EntitySet Name="teslStandardOneForms" EntityType="TESLModel.teslStandardOneForm" />
+          <AssociationSet Name="FK_teslStandardOneForm_teslGeneralInformationForm1" Association="TESLModel.FK_teslStandardOneForm_teslGeneralInformationForm1">
+            <End Role="teslGeneralInformationForm" EntitySet="teslGeneralInformationForms" />
+            <End Role="teslStandardOneForm" EntitySet="teslStandardOneForms" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="teslGeneralInformationForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" Nullable="false" />
+          <Property Name="Initial" Type="String" MaxLength="10" Unicode="true" FixedLength="true" Nullable="false" />
+          <Property Name="NameOnCertificate" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="CivicNumber" Type="Int32" />
+          <Property Name="Street" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="PostalCode" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Province" Type="Int32" />
+          <Property Name="HomePhone" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="WorkPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="MobilePhone" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="true" Nullable="false" />
+          <Property Name="Fax" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="LanguageProficiencyRequired" Type="Int32" />
+          <Property Type="Byte" Name="Upgrading" />
+          <Property Type="Int32" Name="StandardAppliedFor" />
+          <Property Type="Int32" Name="ProvincialMembership" />
+          <Property Type="Int32" Name="MembershipSumitMethod" />
+          <NavigationProperty Name="teslStandardOneForm" Relationship="TESLModel.FK_teslStandardOneForm_teslGeneralInformationForm1" FromRole="teslGeneralInformationForm" ToRole="teslStandardOneForm" />
+        </EntityType>
+        <EntityType Name="teslStandardOneForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="DegreeCompleted" />
+          <Property Type="Int32" Name="YearCompleted" />
+          <Property Type="String" Name="University" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="TrainingInstitution" />
+          <Property Type="String" Name="ContactPerson" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ProgramName" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="DateCompleted" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="InstitutionName" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CivicNumber" />
+          <Property Type="String" Name="Street" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="PostalCode" />
+          <Property Type="String" Name="City" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="Province" />
+          <Property Type="String" Name="SponsorTeacherName" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ContactInformation" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="PracticumSupervisor" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="HoursObserving" />
+          <Property Type="Int32" Name="HoursPractice" />
+          <NavigationProperty Name="teslGeneralInformationForm1" Relationship="TESLModel.FK_teslStandardOneForm_teslGeneralInformationForm1" FromRole="teslStandardOneForm" ToRole="teslGeneralInformationForm" />
+        </EntityType>
+        <Association Name="FK_teslStandardOneForm_teslGeneralInformationForm1">
+          <End Type="TESLModel.teslGeneralInformationForm" Role="teslGeneralInformationForm" Multiplicity="1" />
+          <End Type="TESLModel.teslStandardOneForm" Role="teslStandardOneForm" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="teslGeneralInformationForm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="teslStandardOneForm">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TESLModelStoreContainer" CdmEntityContainer="TESLEntities">
+          <EntitySetMapping Name="teslGeneralInformationForms">
+            <EntityTypeMapping TypeName="TESLModel.teslGeneralInformationForm">
+              <MappingFragment StoreEntitySet="teslGeneralInformationForm">
+                <ScalarProperty Name="MembershipSumitMethod" ColumnName="MembershipSumitMethod" />
+                <ScalarProperty Name="ProvincialMembership" ColumnName="ProvincialMembership" />
+                <ScalarProperty Name="StandardAppliedFor" ColumnName="StandardAppliedFor" />
+                <ScalarProperty Name="Upgrading" ColumnName="Upgrading" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Initial" ColumnName="Initial" />
+                <ScalarProperty Name="NameOnCertificate" ColumnName="NameOnCertificate" />
+                <ScalarProperty Name="CivicNumber" ColumnName="CivicNumber" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="LanguageProficiencyRequired" ColumnName="LanguageProficiencyRequired" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="teslStandardOneForms">
+            <EntityTypeMapping TypeName="TESLModel.teslStandardOneForm">
+              <MappingFragment StoreEntitySet="teslStandardOneForm">
+                <ScalarProperty Name="HoursPractice" ColumnName="HoursPractice" />
+                <ScalarProperty Name="HoursObserving" ColumnName="HoursObserving" />
+                <ScalarProperty Name="PracticumSupervisor" ColumnName="PracticumSupervisor" />
+                <ScalarProperty Name="ContactInformation" ColumnName="ContactInformation" />
+                <ScalarProperty Name="SponsorTeacherName" ColumnName="SponsorTeacherName" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="CivicNumber" ColumnName="CivicNumber" />
+                <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+                <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="TrainingInstitution" ColumnName="TrainingInstitution" />
+                <ScalarProperty Name="University" ColumnName="University" />
+                <ScalarProperty Name="YearCompleted" ColumnName="YearCompleted" />
+                <ScalarProperty Name="DegreeCompleted" ColumnName="DegreeCompleted" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,172 @@
+﻿@model OneContact.Models.teslGeneralInformationForm
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>teslGeneralInformationForm</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Initial)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Initial)
+            @Html.ValidationMessageFor(model => model.Initial)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NameOnCertificate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NameOnCertificate)
+            @Html.ValidationMessageFor(model => model.NameOnCertificate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CivicNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CivicNumber)
+            @Html.ValidationMessageFor(model => model.CivicNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Street)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Street)
+            @Html.ValidationMessageFor(model => model.Street)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostalCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostalCode)
+            @Html.ValidationMessageFor(model => model.PostalCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.City)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.City)
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Province)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Province)
+            @Html.ValidationMessageFor(model => model.Province)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomePhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePhone)
+            @Html.ValidationMessageFor(model => model.HomePhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WorkPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WorkPhone)
+            @Html.ValidationMessageFor(model => model.WorkPhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobilePhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobilePhone)
+            @Html.ValidationMessageFor(model => model.MobilePhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fax)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fax)
+            @Html.ValidationMessageFor(model => model.Fax)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LanguageProficiencyRequired)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LanguageProficiencyRequired)
+            @Html.ValidationMessageFor(model => model.LanguageProficiencyRequired)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Upgrading)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Upgrading)
+            @Html.ValidationMessageFor(model => model.Upgrading)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StandardAppliedFor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StandardAppliedFor)
+            @Html.ValidationMessageFor(model => model.StandardAppliedFor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProvincialMembership)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProvincialMembership)
+            @Html.ValidationMessageFor(model => model.ProvincialMembership)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

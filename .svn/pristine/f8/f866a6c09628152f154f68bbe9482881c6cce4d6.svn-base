@@ -1,0 +1,36 @@
+﻿using System.Web.Mvc;
+using Umbraco.Web.Mvc;
+using OneContact.Models;
+using System.Data;
+
+namespace OneContact.Controllers
+{
+    public class GeneralInformationFormController : SurfaceController
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        //
+        // GET: /Form/
+        //
+        [HttpPost]
+        public ActionResult NextStep(teslGeneralInformationForm model)
+        {
+            TESLEntities entities = new TESLEntities();
+            entities.Entry<teslGeneralInformationForm>(model).State = model.id == 0? EntityState.Added : EntityState.Modified;
+            entities.SaveChanges();
+            ModelState.Clear();
+            if (!ModelState.IsValid)
+            {
+                //Perhaps you might want to add a custom message to the ViewBag
+                //which will be available on the View when it renders (since we're not 
+                //redirecting)
+                return CurrentUmbracoPage();
+            }
+            return CurrentUmbracoPage();
+        }
+
+    }
+}

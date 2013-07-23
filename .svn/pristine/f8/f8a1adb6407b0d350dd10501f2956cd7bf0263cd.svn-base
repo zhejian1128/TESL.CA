@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TESLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TESLModelStoreContainer">
+          <EntitySet Name="teslGeneralInformationForm" EntityType="TESLModel.Store.teslGeneralInformationForm" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="teslGeneralInformationForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="nchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nchar" MaxLength="50" />
+          <Property Name="Initial" Type="nchar" MaxLength="10" />
+          <Property Name="NameOnCertificate" Type="nchar" MaxLength="50" />
+          <Property Name="CivicNumber" Type="int" />
+          <Property Name="Street" Type="nchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="int" />
+          <Property Name="City" Type="nchar" MaxLength="50" />
+          <Property Name="Province" Type="int" />
+          <Property Name="HomePhone" Type="nchar" MaxLength="10" />
+          <Property Name="WorkPhone" Type="nchar" MaxLength="15" />
+          <Property Name="MobilePhone" Type="nchar" MaxLength="10" />
+          <Property Name="Email" Type="nchar" MaxLength="50" />
+          <Property Name="Fax" Type="nchar" MaxLength="10" />
+          <Property Name="LanguageProficiencyRequired" Type="int" />
+          <Property Name="Upgrading" Type="tinyint" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TESLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TESLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="teslGeneralInformationForms" EntityType="TESLModel.teslGeneralInformationForm" />
+        </EntityContainer>
+        <EntityType Name="teslGeneralInformationForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Initial" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="NameOnCertificate" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="CivicNumber" Type="Int32" />
+          <Property Name="Street" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="PostalCode" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Province" Type="Int32" />
+          <Property Name="HomePhone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="WorkPhone" Type="String" MaxLength="15" Unicode="true" FixedLength="true" />
+          <Property Name="MobilePhone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Fax" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="LanguageProficiencyRequired" Type="Int32" />
+          <Property Type="Byte" Name="Upgrading" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TESLModelStoreContainer" CdmEntityContainer="TESLEntities">
+          <EntitySetMapping Name="teslGeneralInformationForms">
+            <EntityTypeMapping TypeName="TESLModel.teslGeneralInformationForm">
+              <MappingFragment StoreEntitySet="teslGeneralInformationForm">
+                <ScalarProperty Name="Upgrading" ColumnName="Upgrading" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Initial" ColumnName="Initial" />
+                <ScalarProperty Name="NameOnCertificate" ColumnName="NameOnCertificate" />
+                <ScalarProperty Name="CivicNumber" ColumnName="CivicNumber" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="LanguageProficiencyRequired" ColumnName="LanguageProficiencyRequired" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

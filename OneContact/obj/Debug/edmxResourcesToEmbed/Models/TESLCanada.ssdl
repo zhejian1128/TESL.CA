@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TESLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TESLModelStoreContainer">
+    <EntitySet Name="teslGeneralInformationForm" EntityType="TESLModel.Store.teslGeneralInformationForm" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="teslGeneralInformationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="nchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nchar" MaxLength="50" />
+    <Property Name="Initial" Type="nchar" MaxLength="10" />
+    <Property Name="NameOnCertificate" Type="nchar" MaxLength="50" />
+    <Property Name="CivicNumber" Type="int" />
+    <Property Name="Street" Type="nchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="int" />
+    <Property Name="City" Type="nchar" MaxLength="50" />
+    <Property Name="Province" Type="int" />
+    <Property Name="HomePhone" Type="nchar" MaxLength="10" />
+    <Property Name="WorkPhone" Type="nchar" MaxLength="15" />
+    <Property Name="MobilePhone" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="Fax" Type="nchar" MaxLength="10" />
+    <Property Name="LanguageProficiencyRequired" Type="int" />
+    <Property Name="Upgrading" Type="tinyint" />
+  </EntityType>
+</Schema>

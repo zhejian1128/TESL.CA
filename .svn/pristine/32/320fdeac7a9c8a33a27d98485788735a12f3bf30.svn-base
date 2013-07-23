@@ -1,0 +1,45 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "teslMaster.cshtml";
+	var provinceList = new List<SelectListItem>
+    {
+        new SelectListItem {Selected = true, Text = "Contact", Value = "contact"},
+        new SelectListItem {Selected = false, Text = "Request for quote", Value = "quote"},
+        new SelectListItem {Selected = false, Text = "Testimonial", Value = "testimonial"},
+    };
+    
+    var provincialMembershipList = new Dictionary<int, string>();
+    provincialMembershipList.Add(1, "BC TEAL");
+    provincialMembershipList.Add(2, "TESL Saskatchewan");
+    provincialMembershipList.Add(3, "TEAM");
+    provincialMembershipList.Add(4, "TESL NS");
+    provincialMembershipList.Add(5, "TESL PEI");
+    provincialMembershipList.Add(6, "ATESL");
+    provincialMembershipList.Add(7, "TEAL Manitoba");
+    provincialMembershipList.Add(8, "TESL Ontario");
+    provincialMembershipList.Add(9, "TESL NB");
+    provincialMembershipList.Add(10, "TESL Yukon");
+    
+
+    var standardList = new Dictionary<int, string>();
+    standardList.Add(1, "Professional Certificate Standard One [Interim]");
+    standardList.Add(2, "Professional Certificate Standard One [Permanent]");
+    standardList.Add(3, "Professional Certificate Standard Two [Interim]");
+    standardList.Add(4, "Professional Certificate Standard Two [Permanent]");
+    standardList.Add(5, "Professional Certificate Standard Three [Interim]");
+    standardList.Add(6, "Professional Certificate Standard Three [Permanent]");
+    
+    var membershipSubmitMethodList = new Dictionary<int, string>();
+    membershipSubmitMethodList.Add(1, "Email sent directly from province");
+    membershipSubmitMethodList.Add(2, "Official receipt enclosed");
+    membershipSubmitMethodList.Add(3, "Membership card enclosed");
+    membershipSubmitMethodList.Add(4, "International Membership Application Enclosed");
+    
+    Html.RenderPartial("~/Views/Partials/GeneralInformationForm.cshtml", new OneContact.Models.teslGeneralInformationFormModel
+    {
+        ProvinceList = provinceList,
+        ProvincialMembershipList = provincialMembershipList,
+        StandardList = standardList,
+        MembershipSubmitMethodList = membershipSubmitMethodList
+    });
+}

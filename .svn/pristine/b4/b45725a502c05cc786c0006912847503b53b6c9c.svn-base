@@ -1,0 +1,31 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "~/Views/umbMaster.cshtml";
+    var contactTypes = new List<SelectListItem>
+                       {
+                           new SelectListItem {Selected = false, Text = "Contact", Value = "contact"},
+                           new SelectListItem {Selected = false, Text = "Request for quote", Value = "quote"},
+                           new SelectListItem {Selected = false, Text = "Testimonial", Value = "testimonial"},
+                       };
+}
+
+<div id="page-bgtop">
+    <div id="content">
+        <div class="post">
+            <h2 class="title"><span>@Umbraco.Field("pageName")</span></h2>
+            <div class="entry">
+                @Umbraco.Field("bodyText")
+                @{
+                    Html.RenderPartial("~/Views/Partials/Contact.cshtml", new OneContact.Models.ContactModel { ContactTypes = contactTypes });
+                }
+            </div>
+        </div>
+    </div>
+    <!-- end div#content -->
+
+    <div id="sidebar">
+        @Umbraco.RenderMacro("umb2ndLevelNavigation")
+    </div>
+    <!-- end div#sidebar -->
+    <div style="clear: both; height: 1px"></div>
+</div>

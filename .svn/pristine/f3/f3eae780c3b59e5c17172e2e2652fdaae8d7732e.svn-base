@@ -1,0 +1,202 @@
+﻿@model IEnumerable<OneContact.Models.teslGeneralInformationFormModel>
+
+@{
+    ViewBag.Title = "CertificationDirectory";
+    Layout = "~/Views/umbMaster.cshtml";
+}
+
+<h2>CertificationDirectory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone_First)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone_Second)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone_Third)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhone_First)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhone_Second)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhone_Third)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhone_Ext)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobilePhone_First)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobilePhone_Second)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobilePhone_Third)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax_First)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax_Second)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax_Third)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Initial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOnCertificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CivicNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobilePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LanguageProficiencyRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Upgrading)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone_First)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone_Second)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone_Third)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhone_First)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhone_Second)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhone_Third)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhone_Ext)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobilePhone_First)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobilePhone_Second)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobilePhone_Third)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax_First)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax_Second)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax_Third)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Initial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOnCertificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CivicNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobilePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LanguageProficiencyRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Upgrading)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

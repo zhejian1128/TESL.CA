@@ -1,0 +1,40 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "teslMaster.cshtml";
+	var provinceList = new List<SelectListItem>
+    {
+        new SelectListItem {Selected = true, Text = "Contact", Value = "1"},
+        new SelectListItem {Selected = false, Text = "Request for quote", Value = "2"},
+        new SelectListItem {Selected = false, Text = "Testimonial", Value = "3"},
+    };
+
+    var degressList = new List<SelectListItem>
+    {
+        new SelectListItem {Selected = true, Text = "High School Diploma", Value = "1"},
+        new SelectListItem {Selected = false, Text = "High School Diploma", Value = "2"},
+        new SelectListItem {Selected = false, Text = "High School Diploma", Value = "3"},
+    };
+
+    var yearList = new List<SelectListItem>();
+    for (var i = 1970; i <= 2010; i++)
+    {
+		string year = i.ToString();
+        yearList.Add(new SelectListItem { Selected = false, Text = year, Value = year });
+    };
+    
+    var trainingInstitutionList = new List<SelectListItem>
+    {
+        new SelectListItem {Selected = true, Text = "Lorem Imsum", Value = "1"},
+        new SelectListItem {Selected = false, Text = "Lorem Imsum", Value = "2"},
+        new SelectListItem {Selected = false, Text = "Lorem Imsum", Value = "3"},
+    };
+	
+    Html.RenderPartial("~/Views/Partials/StandardOneForm.cshtml", new OneContact.Models.teslStandardOneFormModel
+    {
+		id = Convert.ToInt32(Session["ApplicationId"]),
+        ProvinceList = provinceList,
+        DegreeList = degressList,
+        YearList = yearList,
+        TrainingInstitutionList = trainingInstitutionList
+    });
+}

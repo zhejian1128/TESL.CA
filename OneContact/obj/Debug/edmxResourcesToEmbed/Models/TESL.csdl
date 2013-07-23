@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TESLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TESLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="teslGeneralInformationForms" EntityType="TESLModel.teslGeneralInformationForm" />
+    <EntitySet Name="teslInternationalApplicationForms" EntityType="TESLModel.teslInternationalApplicationForm" />
+    <EntitySet Name="teslOntarioApplicationForms" EntityType="TESLModel.teslOntarioApplicationForm" />
+    <EntitySet Name="teslStandardOneForms" EntityType="TESLModel.teslStandardOneForm" />
+  </EntityContainer>
+  <EntityType Name="teslGeneralInformationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Initial" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="NameOnCertificate" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="CivicNumber" />
+    <Property Type="String" Name="Street" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="PostalCode" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="Province" />
+    <Property Type="String" Name="HomePhone" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="WorkPhone" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="MobilePhone" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="StandardAppliedFor" />
+    <Property Type="Int32" Name="ProvincialMembership" />
+    <Property Type="Int32" Name="MembershipSumitMethod" />
+    <Property Type="Int32" Name="LanguageProficiencyRequired" />
+    <Property Type="Byte" Name="Upgrading" />
+    <Property Type="String" Name="DateCertified" MaxLength="12" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="teslInternationalApplicationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="teslOntarioApplicationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="MemberNumber" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="DueDate" Precision="0" />
+    <Property Type="Binary" Name="CopyImage" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="teslStandardOneForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="DegreeCompleted" />
+    <Property Type="Int32" Name="YearCompleted" />
+    <Property Type="String" Name="University" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="TrainingInstitution" />
+    <Property Type="String" Name="ContactPerson" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ProgramName" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="DateCompleted" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="InstitutionName" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="CivicNumber" />
+    <Property Type="String" Name="Street" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="PostalCode" />
+    <Property Type="String" Name="City" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="Province" />
+    <Property Type="String" Name="SponsorTeacherName" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ContactInformation" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PracticumSupervisor" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="HoursObserving" />
+    <Property Type="Int32" Name="HoursPractice" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TESLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TESLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="teslGeneralInformationForms" EntityType="TESLModel.teslGeneralInformationForm" />
+  </EntityContainer>
+  <EntityType Name="teslGeneralInformationForm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Initial" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="NameOnCertificate" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="CivicNumber" Type="Int32" />
+    <Property Name="Street" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="PostalCode" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Province" Type="Int32" />
+    <Property Name="HomePhone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="15" Unicode="true" FixedLength="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Fax" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="LanguageProficiencyRequired" Type="Int32" />
+    <Property Type="Byte" Name="Upgrading" />
+  </EntityType>
+</Schema>

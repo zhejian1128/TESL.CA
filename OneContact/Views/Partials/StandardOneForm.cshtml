@@ -1,0 +1,110 @@
+﻿@using OneContact.Controllers
+@model OneContact.Models.teslStandardOneFormModel
+<h1>TESL Canada Federation Professional Certificate Application Form</h1>
+<h4>TESL Canada Professional Certificate Standard One[Interim] Application Forms<small>(required for all applications)</small></h4>
+@using (Html.BeginUmbracoForm<FormController>("Save"))
+{
+<section class="form">
+	<div class="text">
+        <p>Education</p>
+        <div class="block">
+            <div class="text">
+                <p>Degree Completed</p>
+                @Html.DropDownListFor(model => model.DegreeCompleted, Model.DegreeList)
+            </div>
+            <div class="text">
+                <p>Year completed</p>
+				@Html.DropDownListFor(model => model.YearCompleted, Model.YearList)
+            </div>
+            <div class="text">
+                <p>University</p>
+                @Html.TextBoxFor(model => model.University, new { @class = "w100" })<br />
+            </div>
+        </div>
+    </div>
+	<br />
+	<br />
+	<div class="text">
+        <p>TESL/TEFL Training</p>
+        <div class="block">
+            <div class="text">
+                <p>TESL/TEFL training institution</p>
+				@Html.DropDownListFor(model => model.TrainingInstitution, Model.TrainingInstitutionList)
+            </div>
+			<br />
+            <div class="text">
+                <p>Contact person</p>
+                @Html.TextBoxFor(model => model.ContactPerson, new { @class = "w100" })
+            </div>
+			<br />
+            <div class="text">
+                <p>Program name</p>
+                @Html.TextBoxFor(model => model.ProgramName, new { @class = "w100" })
+            </div>
+			<br />
+            <div class="text">
+                <p>Date completed</p>
+                @Html.TextBoxFor(model => model.DateCompleted_First, new { @class = "w30", placeholder = "000" })
+                @Html.TextBoxFor(model => model.DateCompleted_Second, new { @class = "w30", placeholder = "123"})
+                @Html.TextBoxFor(model => model.DateCompleted_Third, new { @class = "w40", placeholder = "4567" })
+            </div>
+			<br />
+            <div class="text">
+                <p>Name of institution where practicum was completed</p>
+                @Html.TextBoxFor(model => model.InstitutionName, new { @class = "w100" })
+            </div>
+			<br />			
+			<p>Address of institution where practicum was completed</p>
+			<div class="text">
+				<p>Civic number</p>
+                @Html.TextBoxFor(model => model.CivicNumber, new { @class = "w30" })
+			</div>
+			<div class="text">
+				<p>Street</p>
+                @Html.TextBoxFor(model => model.Street, new { @class = "w100" })
+			</div>
+			<br />
+			<div class="text">
+				<p>Postal code</p>
+                @Html.TextBoxFor(model => model.PostalCode, new { @class = "w30" })
+			</div>
+			<div class="text">
+				<p>City</p>
+                @Html.TextBoxFor(model => model.City, new { @class = "w70" })
+			</div>
+			<div class="text">
+				<p>Province</p>
+				@Html.DropDownListFor(model => model.Province, Model.ProvinceList, new { @class = "w30" })
+			</div>
+			<br />
+			<div class="text">
+				<p>Name of sponsor teacher</p>
+                @Html.TextBoxFor(model => model.SponsorTeacherName, new { @class = "w100" })
+			</div>
+			<br />
+			<div class="text">
+				<p>Contact information</p>
+                @Html.TextBoxFor(model => model.ContactInformation, new { @class = "w100" })
+			</div>
+			<br />
+			<div class="text">
+				<p>Practicum supervisor</p>
+                @Html.TextBoxFor(model => model.PracticumSupervisor, new { @class = "w100" })
+			</div>
+			<br />
+			<div class="text">
+				<p>Hours spent observing sponsor teacher in the classroom</p>
+                @Html.TextBoxFor(model => model.HoursObserving, new { @class = "w30" })
+			</div>
+			<div class="text">
+				<p>Hours of supervised practice teaching</p>
+                @Html.TextBoxFor(model => model.HoursPractice, new { @class = "w30" })
+			</div>
+        </div>
+    </div>
+	<div class="buttons">
+        <button type="submit">Continue</button>
+        <button class="blank">Reset Fields</button>
+    </div>
+</section>
+}

@@ -1,0 +1,141 @@
+﻿@model OneContact.Models.teslGeneralInformationForm
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>teslGeneralInformationForm</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Initial)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Initial)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NameOnCertificate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameOnCertificate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CivicNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CivicNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Street)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Street)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostalCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostalCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Province)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomePhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WorkPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WorkPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MobilePhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobilePhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fax)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LanguageProficiencyRequired)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LanguageProficiencyRequired)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Upgrading)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Upgrading)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StandardAppliedFor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StandardAppliedFor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProvincialMembership)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProvincialMembership)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

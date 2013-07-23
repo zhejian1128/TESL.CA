@@ -1,0 +1,35 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+
+
+	@*OrderBy() takes the property to sort by and optionally order desc/asc *@
+	@{
+		
+		if(Model.NodeById(1114).display_order==12)
+		{
+			foreach (var page in Model.NodeById(1114).Children.Where("Visible").OrderBy("CreateDate desc"))
+			{        				
+				<div>			
+						<span class="round_div" style="background-image:url(@page.picture);">
+							<img src="@page.picture" style='opacity:0;width:94px;height:94px;'/>
+						</span>
+						<h3>@page.name</h3>
+						@page.description			
+				</div>
+			}
+		}
+		else
+		{
+			foreach (var page in Model.NodeById(1114).Children.Where("Visible"))
+			{        				
+				<div>			
+						<span class="round_div" style="background-image:url(@page.picture);">
+							<img src="@page.picture" style='opacity:0;width:94px;height:94px;'/>
+						</span>
+						<h3>@page.name</h3>
+						@page.description			
+				</div>
+			}
+			
+		}
+	}
+

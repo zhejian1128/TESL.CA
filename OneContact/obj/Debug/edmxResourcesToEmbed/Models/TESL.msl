@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TESLModelStoreContainer" CdmEntityContainer="TESLEntities">
+    <EntitySetMapping Name="teslGeneralInformationForms">
+      <EntityTypeMapping TypeName="TESLModel.teslGeneralInformationForm">
+        <MappingFragment StoreEntitySet="teslGeneralInformationForm">
+          <ScalarProperty Name="DateCertified" ColumnName="DateCertified" />
+          <ScalarProperty Name="Upgrading" ColumnName="Upgrading" />
+          <ScalarProperty Name="LanguageProficiencyRequired" ColumnName="LanguageProficiencyRequired" />
+          <ScalarProperty Name="MembershipSumitMethod" ColumnName="MembershipSumitMethod" />
+          <ScalarProperty Name="ProvincialMembership" ColumnName="ProvincialMembership" />
+          <ScalarProperty Name="StandardAppliedFor" ColumnName="StandardAppliedFor" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="CivicNumber" ColumnName="CivicNumber" />
+          <ScalarProperty Name="NameOnCertificate" ColumnName="NameOnCertificate" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teslInternationalApplicationForms">
+      <EntityTypeMapping TypeName="TESLModel.teslInternationalApplicationForm">
+        <MappingFragment StoreEntitySet="teslInternationalApplicationForm">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teslOntarioApplicationForms">
+      <EntityTypeMapping TypeName="TESLModel.teslOntarioApplicationForm">
+        <MappingFragment StoreEntitySet="teslOntarioApplicationForm">
+          <ScalarProperty Name="CopyImage" ColumnName="CopyImage" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="MemberNumber" ColumnName="MemberNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teslStandardOneForms">
+      <EntityTypeMapping TypeName="TESLModel.teslStandardOneForm">
+        <MappingFragment StoreEntitySet="teslStandardOneForm">
+          <ScalarProperty Name="HoursPractice" ColumnName="HoursPractice" />
+          <ScalarProperty Name="HoursObserving" ColumnName="HoursObserving" />
+          <ScalarProperty Name="PracticumSupervisor" ColumnName="PracticumSupervisor" />
+          <ScalarProperty Name="ContactInformation" ColumnName="ContactInformation" />
+          <ScalarProperty Name="SponsorTeacherName" ColumnName="SponsorTeacherName" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="CivicNumber" ColumnName="CivicNumber" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+          <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="TrainingInstitution" ColumnName="TrainingInstitution" />
+          <ScalarProperty Name="University" ColumnName="University" />
+          <ScalarProperty Name="YearCompleted" ColumnName="YearCompleted" />
+          <ScalarProperty Name="DegreeCompleted" ColumnName="DegreeCompleted" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

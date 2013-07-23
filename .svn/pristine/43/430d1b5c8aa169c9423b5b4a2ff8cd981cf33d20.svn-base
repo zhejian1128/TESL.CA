@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE root[ 
+<!ELEMENT CertificationDirectory ANY>
+<!ATTLIST CertificationDirectory id ID #REQUIRED>
+<!ELEMENT Form ANY>
+<!ATTLIST Form id ID #REQUIRED>
+<!ELEMENT GeneralInformationForm ANY>
+<!ATTLIST GeneralInformationForm id ID #REQUIRED>
+<!ELEMENT Home ANY>
+<!ATTLIST Home id ID #REQUIRED>
+<!ELEMENT news ANY>
+<!ATTLIST news id ID #REQUIRED>
+<!ELEMENT newslist ANY>
+<!ATTLIST newslist id ID #REQUIRED>
+<!ELEMENT SiteAdmin ANY>
+<!ATTLIST SiteAdmin id ID #REQUIRED>
+<!ELEMENT slider ANY>
+<!ATTLIST slider id ID #REQUIRED>
+<!ELEMENT sliders ANY>
+<!ATTLIST sliders id ID #REQUIRED>
+<!ELEMENT umbTextpage ANY>
+<!ATTLIST umbTextpage id ID #REQUIRED>
+
+]>
+<root id="-1">
+  <Home id="1089" parentID="-1" level="1" creatorID="0" sortOrder="1" createDate="2013-07-22T09:54:25" updateDate="2013-07-22T23:23:17" nodeName="TESLCanada" urlName="teslcanada" path="-1,1089" isDoc="" nodeType="1086" creatorName="admin" writerName="admin" writerID="0" template="1085" nodeTypeAlias="Home">
+    <sliders id="1101" parentID="1089" level="2" creatorID="0" sortOrder="0" createDate="2013-07-22T15:32:47" updateDate="2013-07-22T17:53:11" nodeName="sliders" urlName="sliders" path="-1,1089,1101" isDoc="" nodeType="1056" creatorName="admin" writerName="admin" writerID="0" template="1046" nodeTypeAlias="sliders">
+      <slideTimems>3500</slideTimems>
+      <slider id="1102" parentID="1101" level="3" creatorID="0" sortOrder="0" createDate="2013-07-22T15:33:02" updateDate="2013-07-22T21:41:50" nodeName="slider1" urlName="slider1" path="-1,1089,1101,1102" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1003/slide1.png</umbracoFile>
+        <teaserText><![CDATA[<p>test2342342424</p>]]></teaserText>
+        <hyperlink>http://www.google.uk</hyperlink>
+        <new_win>9</new_win>
+      </slider>
+      <slider id="1103" parentID="1101" level="3" creatorID="0" sortOrder="1" createDate="2013-07-22T15:33:14" updateDate="2013-07-22T21:41:44" nodeName="slider2" urlName="slider2" path="-1,1089,1101,1103" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1004/slide2.png</umbracoFile>
+        <teaserText><![CDATA[<p>wefqfqfwqfwqefqf</p>]]></teaserText>
+        <hyperlink>http://www.bing.co.uk</hyperlink>
+        <new_win>9</new_win>
+      </slider>
+      <slider id="1105" parentID="1101" level="3" creatorID="0" sortOrder="2" createDate="2013-07-22T16:33:28" updateDate="2013-07-22T23:22:44" nodeName="tewtw" urlName="tewtw" path="-1,1089,1101,1105" isDoc="" nodeType="1055" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="slider">
+        <umbracoFile>/media/1005/slide3.png</umbracoFile>
+        <teaserText><![CDATA[<p>fqfqfqwfqwfqwfwqefwf</p>]]></teaserText>
+        <hyperlink>http://www.google.co.uk</hyperlink>
+        <new_win>9</new_win>
+      </slider>
+    </sliders>
+    <newslist id="1114" parentID="1089" level="2" creatorID="0" sortOrder="1" createDate="2013-07-22T21:29:58" updateDate="2013-07-22T22:02:16" nodeName="newslist" urlName="newslist" path="-1,1089,1114" isDoc="" nodeType="1110" creatorName="admin" writerName="admin" writerID="0" template="1109" nodeTypeAlias="newslist">
+      <news id="1115" parentID="1114" level="3" creatorID="0" sortOrder="0" createDate="2013-07-22T21:30:08" updateDate="2013-07-22T22:09:45" nodeName="Issue 4 of SHARE" urlName="issue-4-of-share" path="-1,1089,1114,1115" isDoc="" nodeType="1112" creatorName="admin" writerName="admin" writerID="0" template="1111" nodeTypeAlias="news">
+        <description><![CDATA[<p><a href="http://www.bing.co.uk" title="TESL Canada's e-Magazine">TESL Canada's e-Magazine</a> is available</p>]]></description>
+        <picture>/media/1006/111.png</picture>
+      </news>
+      <news id="1116" parentID="1114" level="3" creatorID="0" sortOrder="1" createDate="2013-07-22T21:31:29" updateDate="2013-07-22T22:08:18" nodeName="Mark your calendars" urlName="mark-your-calendars" path="-1,1089,1114,1116" isDoc="" nodeType="1112" creatorName="admin" writerName="admin" writerID="0" template="1111" nodeTypeAlias="news">
+        <description><![CDATA[<p><a href="/{localLink:1089}" target="_blank" title="TESLCanada">TESL Canada 2014 Conference</a></p>
+<p>Regina, May 8-10, 2014</p>]]></description>
+        <picture>/media/1007/12.png</picture>
+      </news>
+    </newslist>
+    <Form id="1118" parentID="1089" level="2" creatorID="0" sortOrder="2" createDate="2013-07-22T22:42:19" updateDate="2013-07-22T22:53:40" nodeName="Form" urlName="form" path="-1,1089,1118" isDoc="" nodeType="1077" creatorName="admin" writerName="admin" writerID="0" template="1084" nodeTypeAlias="Form">
+      <GeneralInformationForm id="1121" parentID="1118" level="3" creatorID="0" sortOrder="0" createDate="2013-07-22T23:05:51" updateDate="2013-07-22T23:06:07" nodeName="GeneralInformationForm" urlName="generalinformationform" path="-1,1089,1118,1121" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+    </Form>
+    <Form id="1131" parentID="1089" level="2" creatorID="0" sortOrder="3" createDate="2013-07-23T04:24:46" updateDate="2013-07-23T04:26:53" nodeName="sample" urlName="sample" path="-1,1089,1131" isDoc="" nodeType="1077" creatorName="admin" writerName="admin" writerID="0" template="0" nodeTypeAlias="Form">
+      <GeneralInformationForm id="1132" parentID="1131" level="3" creatorID="0" sortOrder="0" createDate="2013-07-23T04:24:54" updateDate="2013-07-23T04:26:57" nodeName="sample" urlName="sample" path="-1,1089,1131,1132" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm">
+        <GeneralInformationForm id="1133" parentID="1132" level="4" creatorID="0" sortOrder="0" createDate="2013-07-23T04:27:13" updateDate="2013-07-23T04:27:16" nodeName="sa3" urlName="sa3" path="-1,1089,1131,1132,1133" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+        <GeneralInformationForm id="1135" parentID="1132" level="4" creatorID="0" sortOrder="1" createDate="2013-07-23T05:05:37" updateDate="2013-07-23T05:05:39" nodeName="a" urlName="a" path="-1,1089,1131,1132,1135" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+        <GeneralInformationForm id="1136" parentID="1132" level="4" creatorID="0" sortOrder="2" createDate="2013-07-23T05:05:43" updateDate="2013-07-23T05:05:47" nodeName="b" urlName="b" path="-1,1089,1131,1132,1136" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+        <GeneralInformationForm id="1137" parentID="1132" level="4" creatorID="0" sortOrder="3" createDate="2013-07-23T05:05:54" updateDate="2013-07-23T05:05:57" nodeName="c" urlName="c" path="-1,1089,1131,1132,1137" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+      </GeneralInformationForm>
+      <GeneralInformationForm id="1138" parentID="1131" level="3" creatorID="0" sortOrder="1" createDate="2013-07-23T05:06:08" updateDate="2013-07-23T05:06:12" nodeName="d" urlName="d" path="-1,1089,1131,1138" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+      <GeneralInformationForm id="1139" parentID="1131" level="3" creatorID="0" sortOrder="2" createDate="2013-07-23T05:06:16" updateDate="2013-07-23T05:06:20" nodeName="e" urlName="e" path="-1,1089,1131,1139" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+      <GeneralInformationForm id="1140" parentID="1131" level="3" creatorID="0" sortOrder="3" createDate="2013-07-23T05:06:23" updateDate="2013-07-23T05:06:31" nodeName="f" urlName="f" path="-1,1089,1131,1140" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+      <GeneralInformationForm id="1141" parentID="1131" level="3" creatorID="0" sortOrder="4" createDate="2013-07-23T05:07:03" updateDate="2013-07-23T05:07:05" nodeName="g" urlName="g" path="-1,1089,1131,1141" isDoc="" nodeType="1078" creatorName="admin" writerName="admin" writerID="0" template="1120" nodeTypeAlias="GeneralInformationForm" />
+    </Form>
+  </Home>
+  <SiteAdmin id="1099" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2013-07-22T11:27:35" updateDate="2013-07-22T14:50:47" nodeName="admin" urlName="admin" path="-1,1099" isDoc="" nodeType="1095" creatorName="admin" writerName="admin" writerID="0" template="1094" nodeTypeAlias="SiteAdmin" />
+</root>
